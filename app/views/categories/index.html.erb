@@ -1,0 +1,29 @@
+<h1>Listing categories</h1>
+
+<table>
+  <tr>
+    <th>Category name</th>
+    <th>Active</th>
+    <th>Effective date</th>
+    <th>Last effective date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @categories.each do |category| %>
+  <tr>
+    <td><%= category.category_name %></td>
+    <td><%= category.active %></td>
+    <td><%= category.effective_date %></td>
+    <td><%= category.last_effective_date %></td>
+    <td><%= link_to 'Show', category %></td>
+    <td><%= link_to 'Edit', edit_category_path(category) %></td>
+    <td><%= link_to 'Destroy', category, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Category', new_category_path %>

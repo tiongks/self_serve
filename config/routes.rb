@@ -1,4 +1,8 @@
 SelfServe::Application.routes.draw do
+  resources :sub_categories
+
+  resources :categories
+
   resources :users
 
   # The priority is based upon order of creation:

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  categor_id: 1
+  sub-category_name: MyString
+  active: 1
+  effective_date: 2012-06-10
+  last_effective_date: 2012-06-10
+
+two:
+  categor_id: 1
+  sub-category_name: MyString
+  active: 1
+  effective_date: 2012-06-10
+  last_effective_date: 2012-06-10
