@@ -10,19 +10,11 @@
 </head>
 <body>
 <div class="container">
-  <header>
-    <%- image_tag("rails.png", :alt => "Self Serve", :class => "round") %>
-    <nav class="round">
-      <ul>
-        <li><%= link_to "Home", '#' %></li>
-        <li><%= link_to "Contact", '#' %></li>
-        <li><%= link_to "About", '#' %></li>
-      </ul>
-    </nav>
-  </header>
+  <%= render 'layouts/header' %>
   <section class="round">
     <%= yield %>
   </section>
+  <%= render 'layouts/footer' %>
 </div>
 </body>
 </html>
