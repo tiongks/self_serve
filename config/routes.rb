@@ -6,14 +6,13 @@ SelfServe::Application.routes.draw do
 
   get "pages/about"
 
-  match "/", :to => "pages#home"
+  root :to => "pages#home"
 
   match "/home", :to => "pages#home"
 
   match "/about", :to => "pages#about"
 
   match "/contact", :to => "pages#contact"
-
 
   resources :sub_categories
 
