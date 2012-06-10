@@ -1,4 +1,9 @@
 SelfServe::Application.routes.draw do
+
+  get "pages/home"
+
+  get "pages/contact"
+
   resources :sub_categories
 
   resources :categories
