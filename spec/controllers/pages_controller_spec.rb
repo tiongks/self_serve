@@ -27,22 +27,22 @@ describe PagesController do
 
   describe "GET 'home'" do
     it "should have an Home title" do
-      get "about"
-      response.should have_selector("title", :content => "SelfServe - Home")
+      get "home"
+      response.should have_selector("h1", :content => "Pages#home")
     end
   end
 
   describe "GET 'contact'" do
     it "should have an Contact title" do
-      get "about"
-      response.should have_selector("title", :content => "SelfServe - Contact")
+      get "contact"
+      response.should have_selector("h1", :content => "Pages#contact")
     end
   end
 
   describe "GET 'about'" do
     it "should have an About title" do
       get "about"
-      response.should have_selector("title", :content => "SelfServe - About")
+      response.should have_selector("h1", :content => "Pages#about")
     end
   end
 
