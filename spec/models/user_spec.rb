@@ -85,5 +85,28 @@ describe User do
 		short_pass = "a" * 50
 		new_attr = @attr
 		User.new(@attr, :pass_phrase => short_pass).should_not be_valid
-	end
+  end
+
+  describe "password encryption" do
+
+    before :each do
+      new_attr = @attr
+      new_attr[:pass_phrase] = "passphrase"
+      new_attr[:pass_phrase_confirmation] = new_attr[:pass_phrase]
+      @user = User.create new_attr
+    end
+
+    it "should have an encrypted password" do
+      @user.should respond_to :encrypted_pass
+    end
+
+    it "should store the pass phrase correctly" do
+      (@user.pass_phrase == "passphrase").should be_true
+    end
+
+    it "should validate passwords" do
+      @user.correct_password?("passphrase").should be_true
+    end
+
+  end
 end
