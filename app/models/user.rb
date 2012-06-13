@@ -28,7 +28,6 @@ class User < ActiveRecord::Base
   private
 
   def encrypt_password
-    @salt = get_salt
     self.encrypted_pass = encrypt(pass_phrase)
   end
 
@@ -41,6 +40,6 @@ class User < ActiveRecord::Base
   end
 
   def encrypt(string)
-    secure_hash "#{@salt}--#{string}"
+    secure_hash "#{get_salt}--#{string}"
   end
 end
