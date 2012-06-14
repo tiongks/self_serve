@@ -48,6 +48,7 @@ GEM
     factory_girl_rails (3.4.0)
       factory_girl (~> 3.4.0)
       railties (>= 3.0.0)
+    gravatar_image_tag (1.1.2)
     hike (1.2.1)
     i18n (0.6.0)
     journey (1.0.3)
@@ -135,6 +136,7 @@ DEPENDENCIES
   activerecord-postgresql-adapter
   coffee-rails (~> 3.2.1)
   factory_girl_rails
+  gravatar_image_tag
   jquery-rails
   rails (= 3.2.5)
   rspec
