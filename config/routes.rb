@@ -14,6 +14,8 @@ SelfServe::Application.routes.draw do
 
   match "/contact", :to => "pages#contact"
 
+  match "/signup", :to => "users#signup"
+
   resources :sub_categories
 
   resources :categories

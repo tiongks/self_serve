@@ -30,4 +30,13 @@ describe UsersController do
       response.should have_selector('h1>img', :class => "gravatar")
     end
   end
+
+  describe "GET 'signup'" do
+
+    it "should be successful" do
+      get 'signup'
+      response.should be_successful
+    end
+
+  end
 end
